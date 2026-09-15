@@ -1,0 +1,829 @@
+/* =========================
+   Brand Page
+========================= */
+
+.brand-hero,
+.brand-philosophy,
+.brand-values,
+.brand-statement,
+.brand-cta {
+  width: 100%;
+}
+
+/* =========================
+   Brand Hero
+========================= */
+
+.brand-hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 160px 7vw 100px;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(184, 155, 94, 0.09),
+      transparent 35%
+    ),
+    #0b0b0b;
+
+  color: #f5f3ef;
+
+  overflow: hidden;
+}
+
+.brand-hero__content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+.brand-hero__eyebrow {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: #b89b5e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+.brand-hero__title {
+  max-width: 1000px;
+
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(58px, 8vw, 120px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.brand-hero__title-accent {
+  color: rgba(245, 243, 239, 0.42);
+}
+
+.brand-hero__description {
+  max-width: 520px;
+
+  margin: 45px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: rgba(245, 243, 239, 0.58);
+}
+
+.brand-hero__scroll {
+  position: absolute;
+
+  left: 7vw;
+  bottom: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color: rgba(245, 243, 239, 0.45);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.brand-hero__scroll-line {
+  width: 55px;
+  height: 1px;
+
+  background: rgba(184, 155, 94, 0.65);
+}
+
+/* =========================
+   Philosophy
+========================= */
+
+.brand-philosophy {
+  padding: 150px 7vw;
+
+  background: #0b0b0b;
+
+  color: #f5f3ef;
+}
+
+.brand-philosophy__container {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(60px, 9vw, 140px);
+}
+
+/* =========================
+   Philosophy Image
+========================= */
+
+.brand-philosophy__image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.brand-philosophy__image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 18px;
+
+  border: 1px solid rgba(184, 155, 94, 0.35);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.brand-philosophy__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter: grayscale(12%);
+
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+}
+
+.brand-philosophy__image:hover img {
+  transform: scale(1.035);
+
+  filter: grayscale(0%);
+}
+
+/* =========================
+   Philosophy Content
+========================= */
+
+.brand-philosophy__content {
+  max-width: 600px;
+}
+
+.brand-section-label {
+  display: block;
+
+  margin-bottom: 26px;
+
+  color: #b89b5e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.brand-section-title {
+  margin: 0 0 32px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+}
+
+.brand-section-title span {
+  display: block;
+
+  color: rgba(245, 243, 239, 0.4);
+}
+
+.brand-philosophy__text {
+  max-width: 540px;
+
+  margin: 0 0 20px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: rgba(245, 243, 239, 0.58);
+}
+
+/* =========================
+   Links
+========================= */
+
+.brand-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 22px;
+
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid rgba(184, 155, 94, 0.5);
+
+  color: #f5f3ef;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.brand-link__arrow {
+  color: #b89b5e;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.brand-link:hover {
+  gap: 22px;
+
+  color: #b89b5e;
+
+  border-color: #b89b5e;
+}
+
+.brand-link:hover .brand-link__arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   Values
+========================= */
+
+.brand-values {
+  padding: 150px 7vw;
+
+  background: #101010;
+
+  color: #f5f3ef;
+}
+
+.brand-values__header {
+  max-width: 1300px;
+
+  margin: 0 auto 80px;
+}
+
+.brand-values__grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brand-value {
+  min-height: 260px;
+
+  padding: 0 45px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.brand-value:first-child {
+  padding-left: 0;
+
+  border-left: none;
+}
+
+.brand-value:last-child {
+  padding-right: 0;
+}
+
+.brand-value__number {
+  display: block;
+
+  margin-bottom: 65px;
+
+  color: #b89b5e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+}
+
+.brand-value h3 {
+  margin: 0 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+}
+
+.brand-value p {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: rgba(245, 243, 239, 0.5);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   Brand Statement
+========================= */
+
+.brand-statement {
+  padding: 180px 7vw;
+
+  background: #0b0b0b;
+
+  color: #f5f3ef;
+}
+
+.brand-statement__container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.brand-statement__title {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(46px, 7vw, 90px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.brand-statement__title span {
+  display: block;
+
+  color: rgba(245, 243, 239, 0.38);
+}
+
+.brand-statement__text {
+  max-width: 600px;
+
+  margin: 45px auto 0;
+
+  color: rgba(245, 243, 239, 0.55);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.brand-statement__signature {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 45px;
+
+  margin-top: 70px;
+
+  color: rgba(245, 243, 239, 0.35);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.brand-cta {
+  position: relative;
+
+  padding: 150px 7vw;
+
+  background:
+    linear-gradient(rgba(184, 155, 94, 0.06), rgba(184, 155, 94, 0.02)), #101010;
+
+  color: #f5f3ef;
+}
+
+.brand-cta__container {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.brand-cta__eyebrow {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #b89b5e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+.brand-cta__title {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(44px, 6vw, 78px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+}
+
+.brand-cta__title span {
+  display: block;
+
+  color: rgba(245, 243, 239, 0.4);
+}
+
+.brand-cta .brand-link {
+  margin-top: 45px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .brand-hero {
+    padding: 140px 6vw 100px;
+  }
+
+  .brand-philosophy {
+    padding: 110px 6vw;
+  }
+
+  .brand-philosophy__container {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .brand-philosophy__image {
+    max-width: 650px;
+  }
+
+  .brand-values {
+    padding: 110px 6vw;
+  }
+
+  .brand-values__header {
+    margin-bottom: 60px;
+  }
+
+  .brand-values__grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .brand-value {
+    min-height: auto;
+
+    padding: 45px 0;
+
+    border-left: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .brand-value:first-child {
+    padding-top: 0;
+
+    border-top: none;
+  }
+
+  .brand-value:last-child {
+    padding-right: 0;
+  }
+
+  .brand-value__number {
+    margin-bottom: 35px;
+  }
+
+  .brand-statement {
+    padding: 130px 6vw;
+  }
+
+  .brand-statement__signature {
+    flex-wrap: wrap;
+
+    gap: 20px 35px;
+  }
+
+  .brand-cta {
+    padding: 120px 6vw;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .brand-hero {
+    min-height: 90svh;
+
+    padding: 120px 6vw 80px;
+  }
+
+  .brand-hero__title {
+    font-size: clamp(48px, 13vw, 68px);
+
+    line-height: 1;
+  }
+
+  .brand-hero__description {
+    margin-top: 35px;
+
+    font-size: 14px;
+  }
+
+  .brand-hero__scroll {
+    bottom: 30px;
+  }
+
+  .brand-philosophy {
+    padding: 90px 6vw;
+  }
+
+  .brand-philosophy__image::after {
+    inset: 10px;
+  }
+
+  .brand-section-title {
+    font-size: clamp(40px, 11vw, 55px);
+  }
+
+  .brand-philosophy__text {
+    font-size: 14px;
+  }
+
+  .brand-values {
+    padding: 90px 6vw;
+  }
+
+  .brand-value h3 {
+    font-size: 27px;
+  }
+
+  .brand-value p {
+    font-size: 13px;
+  }
+
+  .brand-statement {
+    padding: 110px 6vw;
+  }
+
+  .brand-statement__title {
+    font-size: clamp(43px, 12vw, 60px);
+  }
+
+  .brand-statement__text {
+    font-size: 14px;
+  }
+
+  .brand-statement__signature {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .brand-cta {
+    padding: 100px 6vw;
+  }
+
+  .brand-cta__title {
+    font-size: clamp(40px, 11vw, 55px);
+  }
+}
+
+/* =========================
+   Persian Direction
+========================= */
+
+html[dir="rtl"] .brand-hero__content,
+html[dir="rtl"] .brand-philosophy__content,
+html[dir="rtl"] .brand-values,
+html[dir="rtl"] .brand-statement,
+html[dir="rtl"] .brand-cta {
+  direction: rtl;
+}
+
+html[dir="rtl"] .brand-section-label {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .brand-philosophy__text,
+html[dir="rtl"] .brand-value p,
+html[dir="rtl"] .brand-statement__text {
+  line-height: 2;
+}
+
+html[dir="rtl"] .brand-link__arrow {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .brand-link:hover .brand-link__arrow {
+  transform: scaleX(-1) translate(3px, -3px);
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-philosophy__image img,
+  .brand-link,
+  .brand-link__arrow {
+    transition: none;
+  }
+}
+
+/* =========================
+   Persian Gold Text
+========================= */
+
+html[dir="rtl"] .brand-hero__eyebrow,
+html[dir="rtl"] .brand-hero__scroll span:first-child,
+html[dir="rtl"] .brand-section-label,
+html[dir="rtl"] .brand-cta__eyebrow {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+html[dir="rtl"] .brand-value__number {
+  font-size: 1rem;
+}
+
+html[dir="rtl"] .brand-statement__signature {
+  font-size: 0.8rem;
+}
+
+/* =========================
+   Scroll Reveal
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Scroll Reveal Variations
+========================= */
+
+.brand-philosophy__image.reveal {
+  transform: translateX(-45px);
+}
+
+.brand-philosophy__content.reveal {
+  transform: translateX(45px);
+}
+
+.brand-philosophy__image.reveal.is-visible,
+.brand-philosophy__content.reveal.is-visible {
+  transform: translateX(0);
+}
+
+.brand-value.reveal {
+  transform: translateY(35px);
+}
+
+.brand-value.reveal.is-visible {
+  transform: translateY(0);
+}
+
+.brand-statement__container.reveal {
+  transform: translateY(50px);
+}
+
+.brand-statement__container.reveal.is-visible {
+  transform: translateY(0);
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .brand-philosophy__image.reveal,
+  .brand-philosophy__content.reveal,
+  .brand-value.reveal,
+  .brand-statement__container.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

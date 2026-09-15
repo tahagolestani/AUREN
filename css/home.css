@@ -1,0 +1,1929 @@
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* =========================
+   Background
+========================= */
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(184, 155, 94, 0.08),
+      transparent 30%
+    ),
+    #0a0a0a;
+  z-index: -2;
+}
+
+/* =========================
+   Container
+========================= */
+
+.hero__container {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 40px;
+  padding-top: 190px;
+  padding-bottom: 140px;
+}
+
+/* =========================
+   Content
+========================= */
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.hero__eyebrow {
+  margin-top: -25px;
+  margin-bottom: 24px;
+  color: #b89b5e;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  font-size: 5rem;
+  letter-spacing: -0.04em;
+  color: #f2f0eb;
+}
+
+.hero__title span {
+  color: #a6a29a;
+}
+
+.hero__description {
+  max-width: 390px;
+  margin-top: 30px;
+  color: #a6a29a;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Hero Button
+========================= */
+
+.hero__button {
+  width: fit-content;
+  margin-top: 40px;
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid rgba(242, 240, 235, 0.2);
+  color: #f2f0eb;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.hero__button:hover {
+  background: #b89b5e;
+  border-color: #b89b5e;
+  color: #0a0a0a;
+  transform: translateY(-3px);
+}
+
+.hero__arrow {
+  font-size: 1rem;
+  transition: transform 0.35s ease;
+}
+
+.hero__button:hover .hero__arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   Product
+========================= */
+
+.hero__product {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__product-glow {
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.13),
+    transparent 65%
+  );
+  filter: blur(20px);
+}
+
+/* =========================
+   Watch Image Container
+========================= */
+
+.hero__watch-placeholder {
+  position: relative;
+  width: min(620px, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+  animation: watchFloat 6s ease-in-out infinite;
+}
+
+/* =========================
+   Watch Image
+========================= */
+
+.hero__watch-image {
+  display: block;
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+}
+
+/* =========================
+   Scroll Indicator
+========================= */
+
+.hero__scroll {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 38px;
+  background: #77736c;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes watchFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(-8deg);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    padding-top: 140px;
+    padding-bottom: 150px;
+  }
+
+  .hero__content {
+    max-width: 600px;
+  }
+
+  .hero__product {
+    min-height: 500px;
+  }
+
+  .hero__watch-placeholder {
+    width: min(500px, 80%);
+  }
+
+  .hero__watch-image {
+    width: 100%;
+    height: 750;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .hero__title {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .hero__description {
+    margin-top: 22px;
+    font-size: 0.88rem;
+  }
+
+  .hero__button {
+    margin-top: 30px;
+  }
+
+  .hero__product {
+    min-height: 400px;
+  }
+
+  .hero__watch-placeholder {
+    width: min(330px, 82%);
+  }
+
+  .hero__watch-image {
+    width: 100%;
+    height: 750px;
+  }
+}
+
+/* =========================
+   Brand Introduction
+========================= */
+
+.brand-intro {
+  position: relative;
+  padding: 180px 0;
+  background: #0a0a0a;
+}
+
+/* =========================
+   Container
+========================= */
+
+.brand-intro__container {
+  position: relative;
+}
+
+/* =========================
+   Section Label
+========================= */
+
+.brand-intro__label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 80px;
+  color: #77736c;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand-intro__label span:first-child {
+  color: #b89b5e;
+}
+
+/* =========================
+   Content
+========================= */
+
+.brand-intro__content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.brand-intro__heading {
+  max-width: 720px;
+}
+
+.section-eyebrow {
+  margin-bottom: 28px;
+  color: #b89b5e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.brand-intro__heading h2 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: -0.04em;
+  color: #f2f0eb;
+}
+
+.brand-intro__heading h2 span {
+  display: block;
+  color: #77736c;
+}
+
+/* =========================
+   Text
+========================= */
+
+.brand-intro__text {
+  max-width: 390px;
+  padding-top: 70px;
+}
+
+.brand-intro__text p {
+  color: #a6a29a;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.brand-intro__text p + p {
+  margin-top: 22px;
+}
+
+/* =========================
+   Text Link
+========================= */
+
+.text-link {
+  width: fit-content;
+  margin-top: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(184, 155, 94, 0.5);
+  color: #f2f0eb;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.text-link:hover {
+  gap: 25px;
+  color: #b89b5e;
+  border-color: #b89b5e;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .brand-intro {
+    padding: 130px 0;
+  }
+
+  .brand-intro__label {
+    margin-bottom: 60px;
+  }
+
+  .brand-intro__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .brand-intro__text {
+    padding-top: 0;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-intro {
+    padding: 100px 0;
+  }
+
+  .brand-intro__label {
+    margin-bottom: 45px;
+  }
+
+  .brand-intro__heading h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .brand-intro__text {
+    font-size: 0.9rem;
+  }
+
+  .text-link {
+    margin-top: 32px;
+  }
+}
+
+/* =========================
+   Featured Watch
+========================= */
+
+.featured-watch {
+  padding: 180px 0;
+  background: #141414;
+  overflow: hidden;
+}
+
+.featured-watch__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   Header
+========================= */
+
+.featured-watch__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.featured-watch__label {
+  display: flex;
+  gap: 16px;
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.featured-watch__label span:first-child {
+  color: #b89b5e;
+  font-size: 1rem;
+}
+
+.featured-watch__label span:last-child {
+  font-size: 1rem;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+.featured-watch__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 100px;
+}
+
+/* =========================
+   Product Visual
+========================= */
+
+.featured-watch__visual {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-watch__glow {
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.16),
+    transparent 65%
+  );
+  filter: blur(25px);
+}
+
+/* =========================
+   Image
+========================= */
+
+.featured-watch__image {
+  position: relative;
+  width: min(430px, 75%);
+  aspect-ratio: 0.72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(184, 155, 94, 0.3);
+  color: #b89b5e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  transform: rotate(-5deg);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+}
+
+.featured-watch__visual:hover .featured-watch__image {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+/* =========================
+   Image Caption
+========================= */
+
+.featured-watch__image-caption {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 30px;
+  color: #77736c;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.featured-watch__image-caption span:first-child {
+  color: #b89b5e;
+}
+
+/* =========================
+   Product Info
+========================= */
+
+.featured-watch__info {
+  max-width: 470px;
+}
+
+.featured-watch__category {
+  margin-bottom: 15px;
+  color: #b89b5e;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.featured-watch__info h2 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  color: #f2f0eb;
+  letter-spacing: -0.04em;
+}
+
+.featured-watch__description {
+  margin-top: 30px;
+  color: #a6a29a;
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   Specifications
+========================= */
+
+.featured-watch__specs {
+  margin-top: 55px;
+  border-top: 1px solid rgba(242, 240, 235, 0.1);
+}
+
+.watch-spec {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(242, 240, 235, 0.1);
+  font-size: 0.75rem;
+}
+
+.watch-spec span {
+  color: #77736c;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.watch-spec strong {
+  color: #f2f0eb;
+  font-weight: 400;
+}
+
+/* =========================
+   Button
+========================= */
+
+.featured-watch__button {
+  width: fit-content;
+  margin-top: 45px;
+  padding: 16px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid rgba(242, 240, 235, 0.2);
+  color: #f2f0eb;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.featured-watch__button:hover {
+  background: #b89b5e;
+  border-color: #b89b5e;
+  color: #0a0a0a;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .featured-watch {
+    padding: 130px 0;
+  }
+
+  .featured-watch__header {
+    margin-bottom: 60px;
+  }
+
+  .featured-watch__content {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .featured-watch__visual {
+    min-height: 550px;
+  }
+
+  .featured-watch__info {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-watch {
+    padding: 100px 0;
+  }
+
+  .featured-watch__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .featured-watch__visual {
+    min-height: 430px;
+  }
+
+  .featured-watch__image {
+    width: 230px;
+  }
+
+  .featured-watch__image-caption {
+    padding: 0 10px;
+  }
+
+  .featured-watch__info h2 {
+    font-size: 3.5rem;
+  }
+
+  .featured-watch__description {
+    font-size: 0.88rem;
+  }
+
+  .featured-watch__specs {
+    margin-top: 40px;
+  }
+}
+
+/* =========================
+   Craftsmanship
+========================= */
+
+.craftsmanship {
+  padding: 180px 0;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.craftsmanship__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.craftsmanship__label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.craftsmanship__label span:first-child {
+  color: #b89b5e;
+  font-size: 1rem;
+}
+
+.craftsmanship__label span:last-child {
+  font-size: 1rem;
+}
+
+.craftsmanship__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 110px;
+  align-items: center;
+}
+
+/* =========================
+   Visual
+========================= */
+
+.craftsmanship__visual {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.craftsmanship__visual::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 155, 94, 0.1), transparent 68%);
+  filter: blur(30px);
+}
+
+.craftsmanship__image {
+  position: relative;
+  width: min(500px, 85%);
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(184, 155, 94, 0.2);
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(184, 155, 94, 0.06),
+      transparent 55%
+    ),
+    #141414;
+  box-shadow:
+    0 50px 120px rgba(0, 0, 0, 0.5),
+    inset 0 0 80px rgba(184, 155, 94, 0.03);
+  transform: rotate(3deg);
+  transition: transform 0.7s ease;
+  overflow: hidden;
+}
+
+.craftsmanship__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.craftsmanship__visual:hover .craftsmanship__image {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.craftsmanship__image span {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #b89b5e;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: 0.18em;
+}
+
+.craftsmanship__image small {
+  margin-top: 12px;
+  color: #77736c;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+}
+
+.craftsmanship__number {
+  position: absolute;
+  right: 0;
+  bottom: 45px;
+  color: rgba(242, 240, 235, 0.08);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+/* =========================
+   Info
+========================= */
+
+.craftsmanship__info {
+  max-width: 520px;
+}
+
+.craftsmanship__category {
+  margin-bottom: 1rem;
+  color: #b89b5e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.craftsmanship__info h2 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: -0.04em;
+  color: #f2f0eb;
+}
+
+.craftsmanship__info h2 span {
+  display: block;
+  color: #77736c;
+}
+
+.craftsmanship__description {
+  max-width: 450px;
+  margin-top: 30px;
+  color: #a6a29a;
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   Details
+========================= */
+
+.craftsmanship__details {
+  margin-top: 55px;
+  border-top: 1px solid rgba(242, 240, 235, 0.1);
+}
+
+.craftsmanship__detail {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(242, 240, 235, 0.1);
+}
+
+.craftsmanship__detail > span {
+  color: #b89b5e;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.craftsmanship__detail h3 {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #f2f0eb;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.craftsmanship__detail p {
+  max-width: 350px;
+  margin-top: 6px;
+  color: #77736c;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.craftsmanship__info .text-link {
+  margin-top: 42px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .craftsmanship {
+    padding: 130px 0;
+  }
+
+  .craftsmanship__header {
+    margin-bottom: 60px;
+  }
+
+  .craftsmanship__content {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .craftsmanship__visual {
+    min-height: 550px;
+  }
+
+  .craftsmanship__info {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .craftsmanship {
+    padding: 100px 0;
+  }
+
+  .craftsmanship__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .craftsmanship__visual {
+    min-height: 400px;
+  }
+
+  .craftsmanship__image {
+    width: 280px;
+  }
+
+  .craftsmanship__number {
+    right: 5px;
+    bottom: 25px;
+    font-size: 5rem;
+  }
+
+  .craftsmanship__info h2 {
+    font-size: 3.5rem;
+  }
+
+  .craftsmanship__description {
+    font-size: 0.88rem;
+  }
+
+  .craftsmanship__details {
+    margin-top: 40px;
+  }
+}
+
+/* =========================
+   Collection Preview
+========================= */
+
+.collection-preview {
+  padding: 180px 0;
+  background: #141414;
+  overflow: hidden;
+}
+
+.collection-preview__header {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 80px;
+  margin-bottom: 90px;
+}
+
+.collection-preview__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.collection-preview__label span:first-child {
+  color: #b89b5e;
+  font-size: 1rem;
+}
+
+.collection-preview__label span:last-child {
+  font-size: 1rem;
+}
+
+.collection-preview__heading {
+  max-width: 750px;
+}
+
+.collection-preview__heading h2 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: -0.04em;
+  color: #f2f0eb;
+}
+
+.collection-preview__heading h2 span {
+  display: block;
+  color: #77736c;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.collection-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.watch-card {
+  min-width: 0;
+}
+
+.watch-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watch-card__visual {
+  position: relative;
+  display: block;
+  aspect-ratio: 0.78;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid rgba(242, 240, 235, 0.08);
+}
+
+.watch-card__image {
+  position: absolute;
+  inset: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(184, 155, 94, 0.2);
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.08),
+    transparent 65%
+  );
+  color: #b89b5e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  transform: rotate(-5deg);
+  transition:
+    transform 0.7s ease,
+    border-color 0.5s ease,
+    background 0.5s ease;
+}
+
+.watch-card:hover .watch-card__image {
+  transform: rotate(0deg) scale(1.04);
+  border-color: rgba(184, 155, 94, 0.45);
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.12),
+    transparent 65%
+  );
+}
+
+.watch-card__index {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  color: #b89b5e;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.watch-card__arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(242, 240, 235, 0.15);
+  color: #f2f0eb;
+  font-size: 1rem;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.watch-card:hover .watch-card__arrow {
+  background: #b89b5e;
+  color: #0a0a0a;
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   Card Info
+========================= */
+
+.watch-card__info {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.watch-card__category {
+  margin-bottom: 6px;
+  color: #b89b5e;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.watch-card__info h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #f2f0eb;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.watch-card__size {
+  color: #77736c;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+.watch-card__description {
+  max-width: 300px;
+  margin-top: 12px;
+  color: #77736c;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.collection-preview__footer {
+  margin-top: 90px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(242, 240, 235, 0.1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.collection-preview__footer > p {
+  max-width: 420px;
+  color: #77736c;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.collection-preview__footer .text-link {
+  margin-top: 0;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .collection-preview {
+    padding: 130px 0;
+  }
+
+  .collection-preview__header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+
+  .collection-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+
+  .watch-card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 10px);
+  }
+
+  .collection-preview__footer {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .collection-preview {
+    padding: 100px 0;
+  }
+
+  .collection-preview__header {
+    margin-bottom: 45px;
+  }
+
+  .collection-preview__heading h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .collection-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .watch-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .watch-card__visual {
+    aspect-ratio: 0.82;
+  }
+
+  .watch-card__info h3 {
+    font-size: 1.5rem;
+  }
+
+  .collection-preview__footer {
+    margin-top: 65px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* =========================
+   Brand Statement
+========================= */
+
+.brand-statement {
+  position: relative;
+  padding: 220px 0;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.brand-statement::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.08),
+    transparent 68%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.brand-statement__container {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-statement__label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand-statement__label span:first-child {
+  color: #b89b5e;
+  font-size: 1rem;
+}
+
+.brand-statement__label span:last-child {
+  font-size: 1rem;
+}
+
+.brand-statement__content {
+  max-width: 950px;
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.brand-statement__content .section-eyebrow {
+  margin-bottom: 30px;
+}
+
+.brand-statement__content h2 {
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  letter-spacing: -0.05em;
+  color: #f2f0eb;
+}
+
+.brand-statement__content h2 span {
+  display: block;
+  color: #77736c;
+}
+
+.brand-statement__description {
+  max-width: 500px;
+  margin: 45px auto 0;
+  color: #a6a29a;
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+.brand-statement__line {
+  width: 1px;
+  height: 80px;
+  margin: 65px auto 35px;
+  background: #b89b5e;
+  opacity: 0.5;
+}
+
+.brand-statement__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  color: #77736c;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand-statement__footer span:not(:last-child)::after {
+  content: "•";
+  margin-left: 45px;
+  color: #b89b5e;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .brand-statement {
+    padding: 160px 0;
+  }
+
+  .brand-statement__content {
+    margin-top: 80px;
+  }
+
+  .brand-statement__content h2 {
+    font-size: clamp(3.2rem, 9vw, 6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-statement {
+    padding: 120px 0;
+  }
+
+  .brand-statement__content {
+    margin-top: 65px;
+  }
+
+  .brand-statement__content h2 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+
+  .brand-statement__description {
+    margin-top: 30px;
+    font-size: 0.86rem;
+  }
+
+  .brand-statement__line {
+    height: 60px;
+    margin-top: 50px;
+  }
+
+  .brand-statement__footer {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .brand-statement__footer span::after {
+    display: none;
+  }
+}
+
+/* =========================
+   Home CTA
+========================= */
+
+.home-cta {
+  position: relative;
+  padding: 190px 0 160px;
+  background: #141414;
+  overflow: hidden;
+}
+
+.home-cta__background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(184, 155, 94, 0.025) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.home-cta__background::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 155, 94, 0.1), transparent 68%);
+  filter: blur(35px);
+}
+
+.home-cta__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-cta__container .section-eyebrow {
+  margin-bottom: 30px;
+}
+
+.home-cta h2 {
+  max-width: 900px;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  letter-spacing: -0.05em;
+  color: #f2f0eb;
+}
+
+.home-cta h2 span {
+  display: block;
+  color: #77736c;
+}
+
+.home-cta__description {
+  max-width: 460px;
+  margin-top: 35px;
+  color: #a6a29a;
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+.home-cta__button {
+  margin-top: 45px;
+  padding: 17px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid rgba(184, 155, 94, 0.5);
+  color: #f2f0eb;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.home-cta__button:hover {
+  background: #b89b5e;
+  border-color: #b89b5e;
+  color: #0a0a0a;
+  transform: translateY(-4px);
+}
+
+.home-cta__arrow {
+  font-size: 1rem;
+  transition: transform 0.35s ease;
+}
+
+.home-cta__button:hover .home-cta__arrow {
+  transform: translate(4px, -4px);
+}
+
+.home-cta__line {
+  width: 1px;
+  height: 80px;
+  margin-top: 75px;
+  background: #b89b5e;
+  opacity: 0.35;
+}
+
+.home-cta__signature {
+  margin-top: 28px;
+  color: #77736c;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .home-cta {
+    padding: 150px 0 130px;
+  }
+
+  .home-cta h2 {
+    font-size: clamp(3.2rem, 9vw, 6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-cta {
+    padding: 120px 0 100px;
+  }
+
+  .home-cta h2 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+
+  .home-cta__description {
+    margin-top: 28px;
+    font-size: 0.86rem;
+  }
+
+  .home-cta__button {
+    margin-top: 35px;
+  }
+
+  .home-cta__line {
+    height: 60px;
+    margin-top: 60px;
+  }
+}
+
+/* =========================
+   Scroll Reveal
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Persian Layout
+========================= */
+
+html[lang="fa"] .hero__eyebrow,
+html[lang="fa"] .section-eyebrow,
+html[lang="fa"] .brand-intro__label,
+html[lang="fa"] .featured-watch__label,
+html[lang="fa"] .craftsmanship__label,
+html[lang="fa"] .collection-preview__label {
+  letter-spacing: 0;
+}
+
+html[lang="fa"] .nav__link {
+  letter-spacing: 0;
+}
+
+html[lang="fa"] .hero__button,
+html[lang="fa"] .featured-watch__button,
+html[lang="fa"] .text-link,
+html[lang="fa"] .home-cta__button {
+  letter-spacing: 0;
+}
+
+/* =========================
+   RTL Direction
+========================= */
+
+html[lang="fa"] .hero__container,
+html[lang="fa"] .brand-intro__content,
+html[lang="fa"] .featured-watch__content,
+html[lang="fa"] .craftsmanship__content {
+  direction: ltr;
+}
+
+/* =========================
+   Persian Text Alignment
+========================= */
+
+html[lang="fa"] .hero__content,
+html[lang="fa"] .brand-intro__heading,
+html[lang="fa"] .brand-intro__text,
+html[lang="fa"] .featured-watch__info,
+html[lang="fa"] .craftsmanship__info {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .hero__description {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .hero__button {
+  direction: rtl;
+}
+
+html[lang="fa"] .hero__arrow {
+  direction: ltr;
+}
+
+/* =========================
+   Brand Introduction RTL
+========================= */
+
+html[lang="fa"] .brand-intro__label {
+  direction: rtl;
+}
+
+html[lang="fa"] .brand-intro__text {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .text-link {
+  direction: rtl;
+}
+
+html[lang="fa"] .text-link > span:last-child {
+  direction: ltr;
+}
+
+/* =========================
+   Featured Watch RTL
+========================= */
+
+html[lang="fa"] .featured-watch__header {
+  direction: rtl;
+}
+
+html[lang="fa"] .featured-watch__info {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .featured-watch__specs {
+  direction: rtl;
+}
+
+html[lang="fa"] .watch-spec {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .watch-spec strong {
+  direction: ltr;
+}
+
+html[lang="fa"] .featured-watch__image-caption {
+  direction: rtl;
+}
+
+html[lang="fa"] .featured-watch__button {
+  direction: rtl;
+}
+
+html[lang="fa"] .featured-watch__button > span:last-child {
+  direction: ltr;
+}
+
+/* =========================
+   Craftsmanship RTL
+========================= */
+
+html[lang="fa"] .craftsmanship__header {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .craftsmanship__info {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .craftsmanship__category {
+  font-size: 1.2rem;
+}
+
+html[lang="fa"] .craftsmanship__description {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .craftsmanship__details {
+  direction: rtl;
+}
+
+html[lang="fa"] .craftsmanship__detail {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .craftsmanship__detail > span {
+  direction: ltr;
+}
+
+html[lang="fa"] .craftsmanship__detail div {
+  text-align: right;
+}
+
+/* =========================
+   Collection Preview RTL
+========================= */
+
+html[lang="fa"] .collection-preview__header {
+  direction: rtl;
+}
+
+html[lang="fa"] .collection-preview__heading {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .collection-preview__grid {
+  direction: rtl;
+}
+
+html[lang="fa"] .watch-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .watch-card__index {
+  right: 22px;
+  left: auto;
+}
+
+html[lang="fa"] .watch-card__arrow {
+  left: 22px;
+  right: auto;
+}
+
+html[lang="fa"] .watch-card__info {
+  direction: rtl;
+}
+
+html[lang="fa"] .watch-card__description {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .collection-preview__footer {
+  direction: rtl;
+}
+
+html[lang="fa"] .collection-preview__footer > p {
+  text-align: right;
+}
+
+/* =========================
+   Brand Statement RTL
+========================= */
+
+html[lang="fa"] .brand-statement__label {
+  direction: rtl;
+}
+
+html[lang="fa"] .brand-statement__content {
+  direction: rtl;
+}
+
+html[lang="fa"] .brand-statement__footer {
+  font-size: 0.7rem;
+}
+
+/* =========================
+   Home CTA RTL
+========================= */
+
+html[lang="fa"] .home-cta__container {
+  direction: rtl;
+}
+
+html[lang="fa"] .home-cta__signature {
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Mobile Persian Layout
+========================= */
+
+@media (max-width: 900px) {
+  html[lang="fa"] .hero__container,
+  html[lang="fa"] .brand-intro__content,
+  html[lang="fa"] .featured-watch__content,
+  html[lang="fa"] .craftsmanship__content {
+    direction: rtl;
+  }
+
+  html[lang="fa"] .hero__content,
+  html[lang="fa"] .brand-intro__heading,
+  html[lang="fa"] .brand-intro__text,
+  html[lang="fa"] .featured-watch__info,
+  html[lang="fa"] .craftsmanship__info {
+    direction: rtl;
+    text-align: right;
+  }
+
+  html[lang="fa"] .collection-preview__heading {
+    text-align: right;
+  }
+
+  html[lang="fa"] .collection-preview__grid {
+    direction: rtl;
+  }
+}
+
+@media (max-width: 600px) {
+  html[lang="fa"] .hero__content,
+  html[lang="fa"] .brand-intro__heading,
+  html[lang="fa"] .brand-intro__text,
+  html[lang="fa"] .featured-watch__info,
+  html[lang="fa"] .craftsmanship__info,
+  html[lang="fa"] .collection-preview__heading {
+    text-align: right;
+  }
+
+  html[lang="fa"] .watch-card {
+    text-align: right;
+  }
+
+  html[lang="fa"] .collection-preview__footer {
+    align-items: flex-start;
+  }
+
+  html[lang="fa"] .brand-statement__footer {
+    font-size: 0.7rem;
+  }
+
+  html[lang="fa"] .home-cta__signature {
+    font-size: 0.9rem;
+  }
+}

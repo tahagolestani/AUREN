@@ -1,0 +1,653 @@
+/* =========================================================
+   COLLECTION HERO
+========================================================= */
+
+.collection-hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 180px 0 120px;
+  border-bottom: 1px solid #242428;
+}
+
+.collection-hero__inner {
+  max-width: 900px;
+}
+
+.collection-hero__eyebrow,
+.collection-cta__eyebrow {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8d8d94;
+}
+
+.collection-hero__title {
+  max-width: 850px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(54px, 7vw, 100px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.collection-hero__title .accent {
+  display: block;
+  color: #a8a8ae;
+}
+
+.collection-hero__description {
+  max-width: 600px;
+  margin-top: 40px;
+  color: #96969d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COLLECTION INTRO
+========================================================= */
+
+.collection-intro {
+  padding: 140px 0;
+}
+
+.collection-intro__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 100px;
+  align-items: start;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 24px;
+  color: #85858c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.collection-intro h2,
+.collection-philosophy h2,
+.collection-cta h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.collection-intro h2 .accent,
+.collection-philosophy h2 .accent,
+.collection-cta h2 .accent {
+  display: block;
+  color: #9b9ba1;
+}
+
+.collection-intro__text {
+  max-width: 560px;
+  margin: 48px 0 0;
+  color: #929299;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   WATCH SECTIONS
+========================================================= */
+
+.collection-watch {
+  padding: 120px 0;
+  border-top: 1px solid #202024;
+}
+
+.collection-watch__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 100px;
+  align-items: center;
+}
+
+.collection-watch__content {
+  max-width: 560px;
+}
+
+.collection-watch__number {
+  display: block;
+  margin-bottom: 14px;
+  color: #707077;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.collection-watch__category {
+  display: block;
+  margin-bottom: 26px;
+  color: #a0a0a7;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.collection-watch h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.collection-watch__description {
+  max-width: 500px;
+  margin: 34px 0 0;
+  color: #929299;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   WATCH SPECS
+========================================================= */
+
+.collection-watch__specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 44px;
+  border-top: 1px solid #2b2b30;
+  border-bottom: 1px solid #2b2b30;
+}
+
+.watch-spec {
+  padding: 20px 18px;
+  border-right: 1px solid #2b2b30;
+}
+
+.watch-spec:first-child {
+  padding-left: 0;
+}
+
+.watch-spec:last-child {
+  border-right: none;
+}
+
+.watch-spec__label {
+  display: block;
+  margin-bottom: 8px;
+  color: #66666d;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.watch-spec__value {
+  display: block;
+  color: #d8d8dc;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   WATCH LINK
+========================================================= */
+
+.collection-watch__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 36px;
+  color: #ededf0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.collection-watch__link i {
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+
+.collection-watch__link:hover {
+  color: #a9a9ae;
+  gap: 18px;
+}
+
+.collection-watch__link:hover i {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   WATCH VISUAL
+========================================================= */
+
+.collection-watch__visual {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watch-placeholder {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at center,
+    #25252a 0%,
+    #17171a 45%,
+    #0e0e10 100%
+  );
+  border: 1px solid #29292e;
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.watch-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid #303036;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.watch-placeholder::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  aspect-ratio: 1;
+  border: 1px solid #38383e;
+  border-radius: 50%;
+  opacity: 0.45;
+}
+
+.watch-placeholder:hover {
+  transform: translateY(-8px);
+  border-color: #3b3b42;
+}
+
+.watch-placeholder__brand {
+  position: relative;
+  z-index: 1;
+  color: #bdbdc3;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+}
+
+.watch-placeholder__number {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  color: #eeeeef;
+  font-size: clamp(70px, 10vw, 130px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.watch-placeholder__caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  color: #77777e;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CHRONOGRAPH
+========================================================= */
+
+.collection-watch--chronograph {
+  background: #101012;
+}
+
+.collection-watch--chronograph .collection-watch__visual {
+  order: 2;
+}
+
+.collection-watch--chronograph .collection-watch__content {
+  order: 1;
+}
+
+/* =========================================================
+   ATELIER
+========================================================= */
+
+.collection-watch--atelier {
+  padding-bottom: 150px;
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.collection-philosophy {
+  padding: 160px 0;
+  background: #101012;
+  border-top: 1px solid #202024;
+  border-bottom: 1px solid #202024;
+}
+
+.collection-philosophy__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.collection-philosophy h2 {
+  margin-top: 10px;
+}
+
+.collection-philosophy p {
+  max-width: 680px;
+  margin: 44px auto 0;
+  color: #909097;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.collection-cta {
+  padding: 170px 0;
+}
+
+.collection-cta__inner {
+  max-width: 850px;
+}
+
+.collection-cta h2 {
+  font-size: clamp(48px, 6vw, 82px);
+}
+
+.collection-cta p {
+  max-width: 520px;
+  margin: 38px 0 0;
+  color: #929299;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.collection-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 15px 22px;
+  border: 1px solid #3a3a40;
+  color: #f0f0f2;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.collection-cta__button:hover {
+  background: #f0f0f2;
+  border-color: #f0f0f2;
+  color: #111113;
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .collection-hero__title,
+html[dir="rtl"] .collection-intro h2,
+html[dir="rtl"] .collection-watch h2,
+html[dir="rtl"] .collection-philosophy h2,
+html[dir="rtl"] .collection-cta h2 {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .collection-watch__link i {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .collection-watch__link:hover i {
+  transform: rotate(180deg) translateX(3px);
+}
+
+html[dir="rtl"] .watch-spec {
+  border-right: none;
+  border-left: 1px solid #2b2b30;
+}
+
+html[dir="rtl"] .watch-spec:first-child {
+  padding-left: 18px;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .watch-spec:last-child {
+  border-left: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .collection-hero {
+    min-height: auto;
+    padding: 150px 0 100px;
+  }
+
+  .collection-intro {
+    padding: 100px 0;
+  }
+
+  .collection-intro__content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .collection-intro__text {
+    margin-top: 0;
+  }
+
+  .collection-watch {
+    padding: 90px 0;
+  }
+
+  .collection-watch__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .collection-watch__visual {
+    min-height: auto;
+  }
+
+  .collection-watch--chronograph .collection-watch__visual,
+  .collection-watch--chronograph .collection-watch__content {
+    order: initial;
+  }
+
+  .watch-placeholder {
+    max-width: 500px;
+  }
+
+  .collection-philosophy {
+    padding: 110px 0;
+  }
+
+  .collection-cta {
+    padding: 120px 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .collection-hero {
+    padding: 130px 0 80px;
+  }
+
+  .collection-hero__eyebrow,
+  .collection-cta__eyebrow {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .collection-hero__description {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .collection-intro {
+    padding: 80px 0;
+  }
+
+  .collection-intro h2,
+  .collection-philosophy h2 {
+    font-size: 40px;
+  }
+
+  .collection-intro__text {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .collection-watch {
+    padding: 70px 0;
+  }
+
+  .collection-watch__grid {
+    gap: 45px;
+  }
+
+  .collection-watch__visual {
+    min-height: auto;
+  }
+
+  .watch-placeholder {
+    width: 100%;
+  }
+
+  .collection-watch__description {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .collection-watch__specs {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-spec,
+  .watch-spec:first-child {
+    padding: 16px 0;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #2b2b30;
+  }
+
+  .watch-spec:last-child {
+    border-bottom: none;
+  }
+
+  html[dir="rtl"] .watch-spec,
+  html[dir="rtl"] .watch-spec:first-child {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+  }
+
+  .collection-philosophy {
+    padding: 90px 0;
+  }
+
+  .collection-philosophy p {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .collection-cta {
+    padding: 90px 0;
+  }
+
+  .collection-cta h2 {
+    font-size: 44px;
+  }
+
+  .collection-cta p {
+    margin-top: 28px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .watch-placeholder,
+  .collection-watch__link,
+  .collection-watch__link i,
+  .collection-cta__button {
+    transition: none;
+  }
+}
+
+/* =========================
+   Scroll Reveal
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

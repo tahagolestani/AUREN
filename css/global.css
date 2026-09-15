@@ -1,0 +1,468 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", Arial, sans-serif;
+  background: #0a0a0a;
+  color: #f2f0eb;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* =========================
+   Container
+========================= */
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(242, 240, 235, 0.08);
+}
+
+.header__container {
+  min-height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav__link {
+  position: relative;
+
+  color: #a6a29a;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+
+  transition: color 0.3s ease;
+}
+
+.nav__link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #b89b5e;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: #f2f0eb;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* =========================
+   Mobile Menu Button
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 32px;
+  height: 24px;
+
+  position: relative;
+}
+
+.menu-toggle span {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: #f2f0eb;
+
+  transition:
+    transform 0.3s ease,
+    top 0.3s ease;
+}
+
+.menu-toggle span:first-child {
+  top: 7px;
+}
+
+.menu-toggle span:last-child {
+  top: 17px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  margin-top: 120px;
+
+  border-top: 1px solid rgba(242, 240, 235, 0.08);
+}
+
+.footer__container {
+  padding: 70px 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer__brand p {
+  margin-top: 12px;
+
+  color: #a6a29a;
+  font-size: 0.85rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.footer__links {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.footer__links a {
+  color: #a6a29a;
+  font-size: 0.82rem;
+
+  transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: #f2f0eb;
+}
+
+.footer__bottom {
+  padding: 24px 0;
+
+  border-top: 1px solid rgba(242, 240, 235, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  color: #77736c;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .header__container {
+    min-height: 72px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+    min-height: calc(100vh - 72px);
+
+    padding: 80px 32px;
+
+    background: #0a0a0a;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2rem;
+    color: #f2f0eb;
+  }
+
+  .menu-toggle.active span:first-child {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle.active span:last-child {
+    top: 12px;
+    transform: rotate(-45deg);
+  }
+
+  .footer__container {
+    padding: 55px 0;
+
+    flex-direction: column;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   Language Switcher
+========================= */
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  padding: 7px 10px;
+  border: 1px solid rgba(242, 240, 235, 0.15);
+  color: #77736c;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.language-toggle:hover {
+  border-color: rgba(184, 155, 94, 0.5);
+  color: #f2f0eb;
+}
+
+.language-toggle__active {
+  color: #b89b5e;
+}
+
+.language-toggle__divider {
+  color: #4f4c47;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .language-toggle {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 9px 12px;
+    font-size: 0.7rem;
+  }
+}
+
+/* =========================
+   Persian Typography
+========================= */
+
+/* =========================
+   Persian Typography
+========================= */
+
+html[lang="fa"] body {
+  font-family: "Vazirmatn", Arial, sans-serif;
+}
+
+html[lang="fa"] h1,
+html[lang="fa"] h2,
+html[lang="fa"] h3,
+html[lang="fa"] h4 {
+  font-family: "Vazirmatn", Arial, sans-serif;
+  font-weight: 500;
+}
+
+html[lang="fa"] .logo {
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+html[lang="fa"] .hero__title,
+html[lang="fa"] .brand-intro__heading h2,
+html[lang="fa"] .featured-watch__info h2 {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* =========================
+   Persian Layout
+========================= */
+
+html[lang="fa"] {
+  direction: rtl;
+}
+
+html[lang="fa"] .header__container {
+  direction: ltr;
+}
+
+html[lang="fa"] .nav {
+  direction: rtl;
+}
+
+html[lang="fa"] .hero__container {
+  direction: rtl;
+}
+
+html[lang="fa"] .hero__content {
+  text-align: right;
+}
+
+html[lang="fa"] .hero__description {
+  text-align: right;
+}
+
+html[lang="fa"] .hero__button {
+  direction: rtl;
+}
+
+html[lang="fa"] .brand-intro__content {
+  direction: rtl;
+}
+
+html[lang="fa"] .brand-intro__heading,
+html[lang="fa"] .brand-intro__text {
+  text-align: right;
+}
+
+html[lang="fa"] .featured-watch__content {
+  direction: rtl;
+}
+
+html[lang="fa"] .featured-watch__info {
+  text-align: right;
+}
+
+html[lang="fa"] .featured-watch__specs {
+  direction: rtl;
+}
+
+html[lang="fa"] .watch-spec {
+  text-align: right;
+}
+
+html[lang="fa"] .featured-watch__button {
+  direction: rtl;
+}
+
+html[lang="fa"] .text-link {
+  direction: rtl;
+}
+
+html[lang="fa"] .hero__arrow,
+html[lang="fa"] .featured-watch__button > span:last-child,
+html[lang="fa"] .text-link > span:last-child {
+  direction: ltr;
+}
