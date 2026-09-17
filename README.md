@@ -1,93 +1,49 @@
 # AUREN — Time, Refined.
 
-AUREN is a fictional luxury watch brand showcase website focused on refined visual design, responsive layouts, smooth interactions, and a premium user experience.
+AUREN is a fictional luxury watch brand website created as a frontend portfolio project.
 
-The project was designed and developed as a frontend portfolio project with an emphasis on modern UI/UX, responsive design, multilingual support, and clean project structure.
+The project focuses on refined visual design, responsive layouts, smooth interactions, multilingual support, and performance-conscious frontend development.
 
-## Live Demo
+## ✨ Live Demo
 
-**[View AUREN Live](https://tahagolestani.github.io/AUREN/)**
+[View AUREN Live](https://tahagolestani.github.io/AUREN/)
 
----
+## 📸 About the Project
 
-## Preview
+AUREN is designed as a premium watchmaking brand experience rather than an e-commerce website.
 
-AUREN presents a fictional collection of luxury timepieces through a dark, minimal and elegant interface inspired by modern watchmaking brands.
+The interface combines:
 
-The website includes dedicated pages for the collection, brand philosophy, and contact experience.
+* Dark luxury aesthetics
+* Warm gold accents
+* Editorial typography
+* Responsive layouts
+* Smooth scroll interactions
+* English / Persian language support
+* RTL support for Persian
+* Reusable UI patterns
+* Mobile-first responsive behavior
 
----
+## 🛠️ Built With
 
-## Features
+* HTML5
+* CSS3
+* JavaScript
+* Responsive Web Design
+* Intersection Observer API
+* LocalStorage
+* Git & GitHub
+* GitHub Pages
 
-- Responsive design for desktop, tablet and mobile
-- English / Persian language support
-- RTL layout support for Persian
-- Dark luxury visual direction
-- Interactive navigation
-- Mobile navigation menu
-- Scroll reveal animations
-- Multi-page architecture
-- Local language preference using `localStorage`
-- Responsive typography and spacing
-- Optimized image loading
-- Semantic HTML structure
-- Accessible navigation and form elements
-
----
-
-## Pages
-
-| Page       | Description                                                   |
-| ---------- | ------------------------------------------------------------- |
-| Home       | Brand introduction, featured timepiece and collection preview |
-| Collection | Full AUREN watch collection                                   |
-| Brand      | AUREN philosophy, values and craftsmanship                    |
-| Contact    | Contact information, form and FAQ                             |
-
----
-
-## Collection
-
-### AUREN 01 — The Classic
-
-A timeless interpretation focused on proportion, restraint and mechanical character.
-
-- 40mm case
-- Automatic movement
-- Sapphire crystal
-- Leather strap
-
-### AUREN 02 — The Modern
-
-A contemporary expression combining performance with refined design.
-
-### AUREN 03 — The Signature
-
-A distinctive interpretation featuring carefully considered finishing and details.
-
----
-
-## Technologies
-
-- HTML5
-- CSS3
-- JavaScript
-- Responsive Web Design
-- CSS Animations
-- Intersection Observer API
-- LocalStorage API
-- Google Fonts
-- Font Awesome
-
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 AUREN/
-│
-├── index.html
+├── assets/
+│   └── images/
+│       ├── auren-01.png
+│       ├── auren-02.png
+│       └── auren-03.png
 │
 ├── css/
 │   ├── global.css
@@ -97,97 +53,83 @@ AUREN/
 │   └── contact.css
 │
 ├── js/
-│   ├── navigation.js
-│   └── main.js
+│   ├── main.js
+│   └── navigation.js
 │
-├── assets/
-│   └── images/
-│       ├── auren-01.png
-│       ├── auren-02.png
-│       └── auren-03.png
+├── pages/
+│   ├── collection.html
+│   ├── brand.html
+│   └── contact.html
 │
-└── pages/
-    ├── collection.html
-    ├── brand.html
-    └── contact.html
+└── index.html
 ```
 
----
+## 🌐 Pages
 
-## Design Direction
+### Home
 
-The visual identity of AUREN is built around:
+The main landing page introducing the AUREN brand and featured timepiece.
 
-- Deep black and charcoal backgrounds
-- Warm gold accents
-- Elegant serif typography
-- Minimal layouts
-- Large editorial imagery
-- Generous spacing
-- Subtle motion
-- Premium luxury-brand aesthetics
+### Collection
 
----
+A showcase of the AUREN watch collection, including AUREN 01, AUREN 02, and AUREN 03.
 
-## Responsive Design
+### Brand
 
-The interface is designed to adapt across different screen sizes, including:
+An overview of the fictional brand philosophy, craftsmanship, and design approach.
 
-- Desktop
-- Laptop
-- Tablet
-- Mobile
+### Contact
 
-Navigation, typography, layouts and content spacing adjust according to the available viewport.
+A dedicated contact experience designed to match the visual language of the brand.
 
----
-
-## Multilingual Support
+## 🌍 Multilingual Support
 
 AUREN supports:
 
-- English (`EN`)
-- Persian (`FA`)
+* English
+* فارسی
 
-The Persian version includes RTL layout support and Persian typography using Vazirmatn.
+The Persian version includes RTL layout support and localized interface content.
 
-The selected language is stored locally so the user's preference can persist between visits.
+## 📱 Responsive Design
+
+The website is designed to adapt across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Layouts, typography, navigation, spacing, and imagery are adjusted for different screen sizes.
+
+## 🎯 Project Goals
+
+This project was built to practice and demonstrate:
+
+* Modern frontend development
+* Responsive UI implementation
+* Visual hierarchy
+* Luxury brand-oriented web design
+* Multilingual interfaces
+* Interactive JavaScript
+* Scroll-based animations
+* Component-like CSS organization
+* Git and GitHub workflow
+* Deployment with GitHub Pages
+
+## 🚀 Deployment
+
+The project is deployed using GitHub Pages.
+
+**Live:**
+https://tahagolestani.github.io/AUREN/
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
+
+AUREN is a fictional brand and is not affiliated with a real watch manufacturer.
 
 ---
 
-## UX & Performance
-
-The project focuses on creating a smooth browsing experience through:
-
-- Lightweight frontend architecture
-- Lazy-loaded images where appropriate
-- CSS-based animations
-- Intersection Observer for scroll-based reveals
-- Responsive assets and layouts
-- Minimal JavaScript dependencies
-
----
-
-## Purpose
-
-AUREN was created as a frontend portfolio project to explore the development of a premium, production-inspired brand website without relying on a backend or e-commerce system.
-
-The project focuses primarily on frontend development, visual design, responsive implementation and user experience.
-
----
-
-## Credits
-
-Designed and developed by **Taha Golestani**.
-
-### Live Website
-
-**[tahagolestani.github.io/AUREN](https://tahagolestani.github.io/AUREN/)**
-
----
-
-## License
-
-This project is a personal portfolio project.
-
-The AUREN brand, visual identity and product concepts are fictional and created for demonstration purposes.
+**Designed & Developed by Taha Golestani**
