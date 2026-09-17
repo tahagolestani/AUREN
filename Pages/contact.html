@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact AUREN — connect with our atelier, boutique and client services.">
+
+    <title>AUREN — Contact</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Vazirmatn:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         Header
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="container header__container">
+
+            <a href="../index.html" class="logo">
+                AUREN
+            </a>
+
+            <nav class="nav">
+
+                <a href="../index.html" class="nav__link" data-i18n="nav.home">
+                    Home
+                </a>
+
+                <a href="collection.html" class="nav__link" data-i18n="nav.collection">
+                    Collection
+                </a>
+
+                <a href="brand.html" class="nav__link" data-i18n="nav.brand">
+                    Brand
+                </a>
+
+                <a href="contact.html" class="nav__link active" data-i18n="nav.contact">
+                    Contact
+                </a>
+
+                <button class="language-toggle" type="button" aria-label="Switch language">
+                    <span class="language-toggle__active">EN</span>
+                    <span class="language-toggle__divider">/</span>
+                    <span>FA</span>
+                </button>
+
+            </nav>
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         Main
+    ====================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             Contact Hero
+        ================================================== -->
+
+        <section class="contact-hero">
+
+            <div class="container contact-hero__container">
+
+                <div class="contact-hero__content">
+
+                    <span class="section-eyebrow" data-i18n="contact.eyebrow">
+                        GET IN TOUCH
+                    </span>
+
+                    <h1 class="contact-hero__title">
+
+                        <span data-i18n="contact.title">
+                            Let’s talk about
+                        </span>
+
+                        <span data-i18n="contact.titleAccent">
+                            time.
+                        </span>
+
+                    </h1>
+
+                    <p class="contact-hero__description" data-i18n="contact.description">
+                        Whether you are looking for a particular timepiece,
+                        visiting our boutique, or simply want to learn more
+                        about AUREN, we would be pleased to hear from you.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Contact Information
+        ================================================== -->
+
+        <section class="contact-info">
+
+            <div class="container contact-info__container">
+
+                <div class="contact-info__header">
+
+                    <div class="contact-info__label">
+                        <span>01</span>
+
+                        <span data-i18n="contact.infoLabel">
+                            CONTACT
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-info__grid">
+
+                    <!-- Contact Details -->
+
+                    <div class="contact-info__content">
+
+                        <span class="section-eyebrow" data-i18n="contact.infoEyebrow">
+                            A DIRECT CONNECTION
+                        </span>
+
+                        <h2 data-i18n="contact.infoTitle">
+                            We are here to assist.
+                        </h2>
+
+                        <p class="contact-info__description" data-i18n="contact.infoDescription">
+                            Our client services team is available to answer
+                            questions about our collections, appointments,
+                            availability and the AUREN experience.
+                        </p>
+
+
+                        <div class="contact-details">
+
+                            <!-- Email -->
+
+                            <div class="contact-detail">
+
+                                <span class="contact-detail__label" data-i18n="contact.emailLabel">
+                                    EMAIL
+                                </span>
+
+                                <a href="mailto:atelier@auren.com" class="contact-detail__value">
+                                    atelier@auren.com
+                                </a>
+
+                            </div>
+
+
+                            <!-- Phone -->
+
+                            <div class="contact-detail">
+
+                                <span class="contact-detail__label" data-i18n="contact.phoneLabel">
+                                    PHONE
+                                </span>
+
+                                <a href="tel:+442079460180" class="contact-detail__value">
+                                    +44 20 7946 0180
+                                </a>
+
+                            </div>
+
+
+                            <!-- Boutique -->
+
+                            <div class="contact-detail">
+
+                                <span class="contact-detail__label" data-i18n="contact.locationLabel">
+                                    BOUTIQUE
+                                </span>
+
+                                <address class="contact-detail__value">
+                                    18 Mayfair Avenue<br>
+                                    London, W1K 6TL<br>
+                                    United Kingdom
+                                </address>
+
+                            </div>
+
+
+                            <!-- Opening Hours -->
+
+                            <div class="contact-detail">
+
+                                <span class="contact-detail__label" data-i18n="contact.hoursLabel">
+                                    OPENING HOURS
+                                </span>
+
+                                <span class="contact-detail__value">
+                                    Monday — Saturday<br>
+                                    10:00 — 18:00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+
+                    <div class="contact-form-wrapper">
+
+                        <form class="contact-form" id="contactForm" novalidate>
+
+                            <!-- Name -->
+
+                            <div class="form-group">
+
+                                <label for="contactName" data-i18n="contact.nameLabel">
+                                    NAME
+                                </label>
+
+                                <input type="text" id="contactName" name="name" autocomplete="name"
+                                    placeholder="Your name" data-i18n-placeholder="contact.namePlaceholder" required>
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="form-group">
+
+                                <label for="contactEmail" data-i18n="contact.formEmailLabel">
+                                    EMAIL
+                                </label>
+
+                                <input type="email" id="contactEmail" name="email" autocomplete="email"
+                                    placeholder="Your email" data-i18n-placeholder="contact.emailPlaceholder" required>
+
+                            </div>
+
+
+                            <!-- Subject -->
+
+                            <div class="form-group">
+
+                                <label for="contactSubject" data-i18n="contact.subjectLabel">
+                                    SUBJECT
+                                </label>
+
+                                <input type="text" id="contactSubject" name="subject" placeholder="How can we help?"
+                                    data-i18n-placeholder="contact.subjectPlaceholder" required>
+
+                            </div>
+
+
+                            <!-- Message -->
+
+                            <div class="form-group">
+
+                                <label for="contactMessage" data-i18n="contact.messageLabel">
+                                    MESSAGE
+                                </label>
+
+                                <textarea id="contactMessage" name="message" rows="5"
+                                    placeholder="Write your message..."
+                                    data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
+
+                            </div>
+
+
+                            <!-- Submit -->
+
+                            <button type="submit" class="contact-form__button">
+
+                                <span data-i18n="contact.submit">
+                                    SEND MESSAGE
+                                </span>
+
+                                <span>↗</span>
+
+                            </button>
+
+
+                            <!-- Form Status -->
+
+                            <p class="contact-form__status" id="formStatus" aria-live="polite">
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Boutique
+        ================================================== -->
+
+        <section class="boutique">
+
+            <div class="container boutique__container">
+
+                <div class="boutique__content">
+
+                    <span class="section-eyebrow" data-i18n="contact.boutiqueEyebrow">
+                        VISIT AUREN
+                    </span>
+
+                    <h2 data-i18n="contact.boutiqueTitle">
+                        Experience AUREN
+                    </h2>
+
+                    <p class="boutique__description" data-i18n="contact.boutiqueDescription">
+                        Step into the world of AUREN and discover our
+                        timepieces in an atmosphere designed around
+                        precision, craftsmanship and quiet luxury.
+                    </p>
+
+                    <a href="brand.html" class="contact-cta__button" data-i18n="contact.boutiqueButton">
+
+                        Discover the boutique
+
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FAQ
+        ================================================== -->
+
+        <section class="contact-faq">
+
+            <div class="container">
+
+                <div class="contact-faq__header">
+
+                    <div class="contact-faq__label">
+
+                        <span>02</span>
+
+                        <span data-i18n="contact.faqLabel">
+                            FAQ
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span class="section-eyebrow" data-i18n="contact.faqEyebrow">
+                            FREQUENTLY ASKED
+                        </span>
+
+                        <h2 data-i18n="contact.faqTitle">
+                            Questions,
+                            answered.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-list">
+
+                    <!-- FAQ 1 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+
+                            <span data-i18n="contact.faq1Question">
+                                Can I visit the AUREN boutique without an appointment?
+                            </span>
+
+                            <span class="faq-item__icon">
+                                +
+                            </span>
+
+                        </summary>
+
+                        <div class="faq-item__answer">
+
+                            <p data-i18n="contact.faq1Answer">
+                                Yes. You are welcome to visit during our
+                                opening hours. For a dedicated consultation,
+                                we recommend arranging an appointment in advance.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <!-- FAQ 2 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+
+                            <span data-i18n="contact.faq2Question">
+                                Where can I learn more about a specific watch?
+                            </span>
+
+                            <span class="faq-item__icon">
+                                +
+                            </span>
+
+                        </summary>
+
+                        <div class="faq-item__answer">
+
+                            <p data-i18n="contact.faq2Answer">
+                                Explore our Collection page for details about
+                                each AUREN timepiece, including its movement,
+                                materials and design characteristics.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <!-- FAQ 3 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+
+                            <span data-i18n="contact.faq3Question">
+                                Does AUREN offer private consultations?
+                            </span>
+
+                            <span class="faq-item__icon">
+                                +
+                            </span>
+
+                        </summary>
+
+                        <div class="faq-item__answer">
+
+                            <p data-i18n="contact.faq3Answer">
+                                Private consultations are available at our
+                                boutique. Contact our client services team
+                                to arrange a suitable time.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <!-- FAQ 4 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+
+                            <span data-i18n="contact.faq4Question">
+                                How can I contact the AUREN team?
+                            </span>
+
+                            <span class="faq-item__icon">
+                                +
+                            </span>
+
+                        </summary>
+
+                        <div class="faq-item__answer">
+
+                            <p data-i18n="contact.faq4Answer">
+                                You can reach our team by email or phone using
+                                the contact details above. We will be pleased
+                                to assist you.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Final CTA
+        ================================================== -->
+
+        <section class="contact-cta">
+
+            <div class="container contact-cta__container">
+
+                <span class="section-eyebrow" data-i18n="contact.ctaEyebrow">
+                    DISCOVER THE COLLECTION
+                </span>
+
+                <h2>
+
+                    <span data-i18n="contact.ctaTitle">
+                        Time deserves
+                    </span>
+
+                    <span data-i18n="contact.ctaTitleAccent">
+                        attention.
+                    </span>
+
+                </h2>
+
+                <p class="contact-cta__description" data-i18n="contact.ctaDescription">
+                    Explore the AUREN collection and discover
+                    timepieces shaped by precision and restraint.
+                </p>
+
+                <a href="collection.html" class="contact-cta__button">
+
+                    <span data-i18n="contact.ctaButton">
+                        VIEW COLLECTION
+                    </span>
+
+                    <span>↗</span>
+
+                </a>
+
+                <div class="contact-cta__line"></div>
+
+                <p class="contact-cta__signature" data-i18n="contact.ctaSignature">
+                    TIME, REFINED.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer__container">
+
+            <div class="footer__brand">
+
+                <a href="../index.html" class="logo">
+                    AUREN
+                </a>
+
+                <p data-i18n="footer.tagline">
+                    Time, refined.
+                </p>
+
+            </div>
+
+
+            <div class="footer__links">
+
+                <a href="../index.html" data-i18n="footer.home">
+                    Home
+                </a>
+
+                <a href="collection.html" data-i18n="footer.collection">
+                    Collection
+                </a>
+
+                <a href="brand.html" data-i18n="footer.brand">
+                    Brand
+                </a>
+
+                <a href="contact.html" data-i18n="footer.contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer__bottom">
+
+            <p data-i18n="footer.copyright">
+                © 2026 AUREN. All rights reserved.
+            </p>
+
+            <p data-i18n="footer.crafted">
+                Crafted with precision.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         Scripts
+    ====================================================== -->
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

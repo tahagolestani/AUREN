@@ -1,0 +1,731 @@
+/* =========================================================
+   AUREN — CONTACT PAGE
+========================================================= */
+
+/* =========================================================
+   Contact Hero
+========================================================= */
+
+.contact-hero {
+  position: relative;
+  min-height: 72svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(184, 155, 94, 0.15);
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(184, 155, 94, 0.1),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(184, 155, 94, 0.035),
+      transparent 35%
+    );
+  pointer-events: none;
+}
+
+.contact-hero__container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero__content {
+  max-width: 900px;
+  padding: 150px 0 100px;
+}
+
+.contact-hero__title {
+  margin: 25px 0 30px;
+  max-width: 800px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.contact-hero__title span:last-child {
+  color: #b89b5e;
+  font-style: italic;
+}
+
+.contact-hero__description {
+  max-width: 570px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Contact Information
+========================================================= */
+
+.contact-info {
+  padding: 150px 0;
+}
+
+.contact-info__container {
+  position: relative;
+}
+
+.contact-info__header {
+  margin-bottom: 80px;
+}
+
+.contact-info__label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-info__label span:first-child {
+  color: #b89b5e;
+}
+
+.contact-info__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(60px, 9vw, 150px);
+  align-items: start;
+}
+
+/* =========================================================
+   Contact Information Content
+========================================================= */
+
+.contact-info__content {
+  max-width: 560px;
+}
+
+.contact-info__content h2 {
+  margin: 20px 0 30px;
+  max-width: 500px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.contact-info__description {
+  max-width: 490px;
+  margin-bottom: 55px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Contact Details
+========================================================= */
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-detail {
+  padding: 25px 20px 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-detail:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-detail:nth-child(even) {
+  padding-left: 25px;
+}
+
+.contact-detail__label {
+  display: block;
+  margin-bottom: 10px;
+  color: #b89b5e;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-detail__value {
+  display: block;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  text-decoration: none;
+  font-style: normal;
+  transition: color 0.3s ease;
+}
+
+a.contact-detail__value:hover {
+  color: #b89b5e;
+}
+
+/* =========================================================
+   Contact Form
+========================================================= */
+
+.contact-form-wrapper {
+  position: relative;
+  padding: clamp(35px, 5vw, 65px);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(184, 155, 94, 0.16);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b89b5e;
+}
+
+.form-group textarea {
+  min-height: 140px;
+}
+
+/* =========================================================
+   Submit Button
+========================================================= */
+
+.contact-form__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 22px;
+  border: 1px solid #b89b5e;
+  background: #b89b5e;
+  color: #080808;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-form__button span:last-child {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-form__button:hover {
+  background: transparent;
+  color: #b89b5e;
+}
+
+.contact-form__button:hover span:last-child {
+  transform: translate(4px, -4px);
+}
+
+.contact-form__status {
+  min-height: 20px;
+  margin: 0;
+  color: #b89b5e;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Boutique
+========================================================= */
+
+.boutique {
+  padding: 0 0 150px;
+}
+
+.boutique__container {
+  display: block;
+}
+
+.boutique__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(55px, 8vw, 110px);
+  background: #111;
+  border: 1px solid rgba(184, 155, 94, 0.12);
+}
+
+.boutique__content h2 {
+  max-width: 700px;
+  margin: 20px 0 30px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 4vw, 4.3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.boutique__description {
+  max-width: 650px;
+  margin: 0 0 40px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.contact-faq {
+  padding: 150px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-faq__header {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.contact-faq__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.72rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.contact-faq__label span:first-child {
+  color: #b89b5e;
+}
+
+.contact-faq__header h2 {
+  margin: 20px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.faq-list {
+  max-width: 1000px;
+  margin-left: auto;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  color: #b89b5e;
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-item__icon {
+  transform: rotate(45deg);
+}
+
+.faq-item__answer {
+  max-width: 720px;
+  padding: 0 70px 30px 0;
+}
+
+.faq-item__answer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Final CTA
+========================================================= */
+
+.contact-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 170px 0;
+  text-align: center;
+  border-top: 1px solid rgba(184, 155, 94, 0.15);
+}
+
+.contact-cta::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.09),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.contact-cta__container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta h2 {
+  max-width: 900px;
+  margin: 25px auto;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.contact-cta h2 span:last-child {
+  color: #b89b5e;
+  font-style: italic;
+}
+
+.contact-cta__description {
+  max-width: 500px;
+  margin: 0 auto 40px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.contact-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 56px;
+  padding: 0 25px;
+  border: 1px solid #b89b5e;
+  color: #b89b5e;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-cta__button span:last-child {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-cta__button:hover {
+  background: #b89b5e;
+  color: #080808;
+}
+
+.contact-cta__button:hover span:last-child {
+  transform: translate(4px, -4px);
+}
+
+.contact-cta__line {
+  width: 1px;
+  height: 70px;
+  margin: 55px auto 25px;
+  background: rgba(184, 155, 94, 0.5);
+}
+
+.contact-cta__signature {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+}
+
+/* =========================================================
+   RTL — Persian
+========================================================= */
+
+html[dir="rtl"] .contact-hero__content,
+html[dir="rtl"] .contact-info__content,
+html[dir="rtl"] .boutique__content,
+html[dir="rtl"] .contact-faq__header,
+html[dir="rtl"] .contact-cta__container {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-detail:nth-child(odd) {
+  border-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[dir="rtl"] .contact-detail:nth-child(even) {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+html[dir="rtl"] .faq-item__answer {
+  padding-right: 0;
+  padding-left: 70px;
+}
+
+html[dir="rtl"] .contact-form__button {
+  text-align: right;
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 900px) {
+  .contact-hero__content {
+    padding: 130px 0 80px;
+  }
+
+  .contact-info,
+  .contact-faq {
+    padding: 110px 0;
+  }
+
+  .contact-info__grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .contact-info__content {
+    max-width: 700px;
+  }
+
+  .boutique__content {
+    min-height: 450px;
+  }
+
+  .contact-faq__header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .faq-list {
+    max-width: none;
+  }
+
+  .contact-cta {
+    padding: 130px 0;
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 600px) {
+  .contact-hero {
+    min-height: 65svh;
+  }
+
+  .contact-hero__content {
+    padding: 120px 0 70px;
+  }
+
+  .contact-hero__title {
+    margin: 20px 0 25px;
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .contact-hero__description {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .contact-info {
+    padding: 90px 0;
+  }
+
+  .contact-info__header {
+    margin-bottom: 55px;
+  }
+
+  .contact-info__grid {
+    gap: 60px;
+  }
+
+  .contact-info__content h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info__description {
+    margin-bottom: 40px;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-detail,
+  .contact-detail:nth-child(even),
+  .contact-detail:nth-child(odd) {
+    padding: 20px 0;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 22px;
+  }
+
+  .contact-form {
+    gap: 25px;
+  }
+
+  .boutique {
+    padding-bottom: 90px;
+  }
+
+  .boutique__content {
+    min-height: auto;
+    padding: 50px 25px;
+  }
+
+  .boutique__content h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-faq {
+    padding: 90px 0;
+  }
+
+  .contact-faq__header {
+    margin-bottom: 55px;
+  }
+
+  .contact-faq__header h2 {
+    font-size: 3rem;
+  }
+
+  .faq-item summary {
+    padding: 25px 0;
+    font-size: 0.9rem;
+  }
+
+  .faq-item__answer {
+    padding: 0 0 25px;
+  }
+
+  .faq-item__answer p {
+    font-size: 0.85rem;
+  }
+
+  .contact-cta {
+    padding: 110px 0;
+  }
+
+  .contact-cta h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .contact-cta__description {
+    font-size: 0.86rem;
+  }
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width: 400px) {
+  .contact-hero__title {
+    font-size: 2.8rem;
+  }
+
+  .contact-info__content h2,
+  .boutique__content h2 {
+    font-size: 2.25rem;
+  }
+
+  .contact-faq__header h2 {
+    font-size: 2.6rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 25px 18px;
+  }
+}
